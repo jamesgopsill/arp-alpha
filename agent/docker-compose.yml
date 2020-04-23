@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  agent:
+    image: ./Dockerfile
+    env_file: prod.env
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0

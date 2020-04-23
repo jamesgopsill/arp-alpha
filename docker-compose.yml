@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  app:
+    image: mattrayner/lamp:latest-1804
+    ports:
+      - 80:80
+    volumes:
+      - ./app:/app:consistent
+      - ./mysql:/var/lib/mysql:delegated
+    env_file: ./app.env
